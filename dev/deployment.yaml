@@ -6,7 +6,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {.HTTPSVC_APPNAME}}
+      app: {{.HTTPSVC_APPNAME}}
   template:
     metadata:
       labels:
