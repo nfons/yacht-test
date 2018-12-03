@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{.HTTPSVC_APPNAME}}
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: {{.HTTPSVC_APPNAME}}
+    spec:
+      containers:
+      - name: app
+        image: {{.HTTPSVC_IMAGE}}
+        ports:
+        - containerPort: 8080
